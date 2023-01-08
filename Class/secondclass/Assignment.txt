@@ -161,5 +161,8 @@
 
       packages locked (already installed in project) -> folder in node_module
 
-      install pacakges + their dependencies & create reference in packageson          
+      install pacakges + their dependencies & create reference in packageson         
+      
+17 react and ReactDom?
+   react is core package and ReactDom is rendering Dom it is used for rendering the dom element.
 
