@@ -136,4 +136,30 @@
    note:-  1.2.x	   1.2.0, 1.2.1, etc., but not 1.3.0
            *	      Matches any version
            latest	   Obtains latest release 
+           
+16 Package.JSON and package-lock-json
+    Package.JSON
+      *->this file is mandatory for every project
+      *->It contains basicinformation about the project
+      *->Application name/version/scripts (ng scripts)
+
+     Package-lock JSON
+
+      *->This files automatically generated for those operations where npm modifies either the
+      rnode_module tree or package-json.
+
+      -*>It is generated after an npm install
+
+      *->It allows future devs & automated systems to download the same dependencies as
+      the project.
+
+      it also allows you to go back to the past version of the dependencies without actual
+      ‘committing the node_modules folder.
+
+      It records the same version of the installed packages which allows to reinstall them.
+      Futuee installs wll be capable of building identical description tree.
+
+      packages locked (already installed in project) -> folder in node_module
+
+      install pacakges + their dependencies & create reference in packageson          
 
