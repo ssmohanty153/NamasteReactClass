@@ -1,0 +1,173 @@
+java script data structure link:-
+https://github.com/trekhleb/javascript-algorithms
+
+
+2)can you explain what happens when we type something into browser and hit eneer??
+https://www.youtube.com/watch?v=AlkDbnbv7dk
+
+It will help you. how  handshake happended  before it get data from server. I have explained on it you could read it.
+Today I joined the masterclass on @Geekster How are websites rendered in a browser?
+
+I get to learn about browser behaviour and how it acts to render our page onto the screen.
+(https://www.linkedin.com/posts/ajmal-ali10_javascript-css-html-activity-6992097939359711232-llQX/?utm_source=share&utm_medium=member_android
+))
+URL parsing by the browser –
+
+• When we click on any URL. The browser parses that URL and returns with some properties of the URL of –
+
+•Protocol (HTTP/HTTPS/HTTP2)
+•Domain name
+•Port no. (433, 80)-default port for browser.
+
+• DNS Lookup –
+As we hit the URL, the Domain name gets mapped by IP address. these Domain name lookups/queries happen in majorly 4 - 5 layers.
+
+1. Browser Cache.
+
+2. OS Cache.
+
+3. Router Cache.
+
+4. Internet Service Provider. Cache(ISP).
+
+Initially, the Domain Name tries to map into its Cache. If they are unable to find inside cache then it will mapped IP address to the domain server.
+
+• After the IP resolution is completed then it tries to make a connection with the domain server through a TCP/IP Connection.
+
+• TCP/IP Connection done in a 3-way handshake between client/browser and server.
+
+1. Client sends a message to Server
+
+2. Server sends a response to the message/Acknowledgement and with their message to the Client.
+
+3. Client then responds to the server's message with Acknowledgement.
+
+So till now, we have seen how this client and sever started communicating with each other.
+
+After the WebPage or App started rendering.
+
+• Rendering a page started with an Html request.
+
+•After the Critical rendering path is a sequence of steps the browser goes through to convert HTML, CSS and Javascript into pixels on the screen.
+
+To render the content the browser has to go through these steps -
+
+• Document Object Model
+
+• CSS Object Model
+
+• Render tree - Capture both DOM and CSSOM.
+
+• Layout - The browser calculate the size of each visible element on the page.
+
+• Paint - paint the pixel on the screen.
+
+If want to know how these thing happens you need to understand first, how the internet works. How data transfer over the internet. 
+https://www.youtube.com/watch?v=x3c1ih2NJEg
+When you type a URL into your browser's address bar and hit enter, several things happen:
+
+1 ) The browser starts by parsing the URL to determine the protocol (such as "http" or "https") and the domain name.
+
+How Does Browser Parse URL ? 
+
+=> When a browser parses a URL, it breaks the URL down into several parts so that it can understand where to send the request and what kind of information to request. The process of parsing a URL typically involves the following steps:
+
+The browser starts by identifying the protocol. This is usually the first part of the URL and is denoted by the characters "http" or "https" (or "ftp" or "file" for other types of URLs).
+
+Next, the browser checks for a username and password, which are used for authentication and are typically included in the URL before the domain name.
+
+The browser then parses the domain name. This is typically the next part of the URL after the protocol and is the unique name that identifies the server or website that the browser should send the request to.
+
+After the domain name, the browser looks for the port number. This is an optional part of a URL and is used to specify a specific port on the server that the request should be sent to. If no port number is specified, the browser will use the default port for the specified protocol (usually 80 for HTTP and 443 for HTTPS).
+
+Finally, the browser parses the path and any query parameters. The path is the part of the URL that comes after the domain name and port number, and it specifies the specific resource or page that the browser should request. The query parameters are additional data that is sent along with the request and are typically used to specify additional information about the request such as search terms, page numbers, etc.
+
+Once the browser has parsed the URL, it can use the information it has gathered to construct the appropriate request and send it to the server. The browser will also use the information in the URL to determine where to display the response once it is received.
+
+
+2 ) The browser then performs a DNS lookup to convert the domain name into an IP address. This is done by checking the local DNS cache on your computer, and if the domain name is not found in the cache, a request is sent to a DNS server to resolve the domain name to an IP address.
+
+What is DNS lookup ? And how Does it Works?
+
+=> DNS (Domain Name System) lookup is the process of converting a domain name (such as "example.com") into an IP address (such as "192.0.2.0"). This is necessary because the internet uses IP addresses to route traffic, but it is easier for people to remember and type domain names rather than a string of numbers.
+
+Here is how the process works:
+
+When you type a domain name into your browser, the browser checks its local DNS cache to see if it has a recent copy of the DNS information for that domain.
+
+If the information is not in the cache, the browser sends a request to the local DNS resolver (usually provided by the operating system or internet service provider) to resolve the domain name to an IP address.
+
+The local DNS resolver checks its own cache to see if it has a recent copy of the DNS information. If not, it sends a request to the root DNS servers.
+
+The root DNS servers are responsible for directing the request to the appropriate top-level domain (TLD) servers. For example, if the domain name is "example.com", the request will be directed to the TLD server for ".com" domains.
+
+The TLD server checks its own records and directs the request to the appropriate authoritative DNS server for the domain in question.
+
+The authoritative DNS server for the domain looks up the IP address associated with the domain name in its records and sends it back to the local DNS resolver.
+
+The local DNS resolver caches the response and sends the IP address back to the browser.
+
+The browser uses the IP address to send the request to the appropriate server.
+
+This process happens very quickly, typically in milliseconds, and the DNS information is cached locally and by the DNS servers for a period of time (TTL) to speed up the process for subsequent requests.
+
+It's important to note that there are also DNS providers (such as Cloudflare) that can be configured as a middleman between the client and the authoritative DNS server in order to provide an additional layer of security, performance optimization and other features.
+
+
+3 ) Once the browser has the IP address, it sends a request to the server located at that IP address using the protocol specified in the URL (usually HTTP or HTTPS).
+
+
+4 ) The server receives the request and processes it, which may involve looking up data from a database or another external source.
+
+5 ) The server then sends a response back to the browser, which typically contains the requested data along with some additional information such as HTTP headers.
+
+What Are HTTP headers? 
+
+=> HTTP headers are a key part of the HTTP protocol and are used to transmit additional information about a request or response. They are included in the message sent between a client (such as a web browser) and a server (such as a web server) and provide additional information about the message, such as the format of the message body, the type of data being sent, and other information.
+
+Here are some examples of commonly used HTTP headers:
+
+Content-Type: This header is used to specify the format of the message body, such as "text/html" for HTML content or "application/json" for JSON data.
+
+Content-Length: This header is used to specify the length of the message body in bytes.
+
+Accept: This header is used to specify the formats that the client is able to handle, such as "text/html" or "application/json".
+
+Authorization: This header is used to provide authentication information, such as a user name and password.
+
+User-Agent: This header is used to identify the client software and version, such as "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36"
+
+Referer: This header is used to specify the URL of the previous page that linked to the current page.
+
+Cookie: This header is used to send cookies to the server, which are small data files that are stored on the client's computer by the browser and can be used to store information such as login credentials or user preferences.
+
+HTTP headers can be used to provide a wide range of information to the server, and different headers can be included in different types of requests. They are an important part of the HTTP protocol and are used to transmit additional information about a request or response, and provide additional information about the message, such as the format of the message body, the type of data being sent, and other information.
+
+
+6 ) The browser receives the response and starts rendering the page. If the response contains any images, scripts, or other resources that need to be loaded, the browser will request those resources as well.
+
+How Does Browser Randers The Page?
+
+=> When a browser receives a request for a webpage, it starts by parsing the HTML code that defines the structure of the page. As it encounters tags, it creates the Document Object Model (DOM), which is a tree-like representation of the elements on the page. Next, it parses the CSS code, which is used to apply styles to the elements in the DOM. The browser then uses the DOM and CSS to layout the page, determining the position and size of each element. Finally, it renders the page, which involves drawing the layout on the screen. This process happens every time a webpage is loaded or reloaded.
+
+** Now You will Ask How Browser Parse The HTML 
+
+=>  When a browser receives an HTML document, it starts by parsing the code from top to bottom and left to right. As it encounters each HTML tag, it creates a corresponding element in the Document Object Model (DOM), which is a tree-like representation of the elements on the page.
+
+The browser starts by creating the root element of the DOM, which is typically the <html> tag. It then moves on to the <head> section of the code and creates the corresponding element in the DOM, along with any child elements within it, such as the <title> tag. After that, the browser moves on to the <body> section of the code and creates the corresponding element and its child elements, such as <p> tags, <div> tags, <img> tags, etc.
+
+The browser also keeps track of the nesting of elements within the HTML code and creates the corresponding nested structure in the DOM. For example, if there is a <div> tag within a <p> tag, the browser creates a <div> element as a child of the <p> element in the DOM.
+
+As the browser parses the HTML code, it also applies any default styles to the elements in the DOM. The browser then uses the DOM and CSS to layout the page, determining the position and size of each element before rendering the page on the screen.
+
+
+7 ) Once all the resources have been loaded and the page has been rendered, the browser will display the final result to the user.
+
+This is a high-level overview of what happens when you type a URL into your browser and hit enter, there are many more things that happen in the background, but this should give you a basic idea of the process.
+
+https://github.com/Tyrrrz/interview-questions/blob/master/!-%20General/What%20happens%20when%20you%20type%20google.com%20in%20your%20browser.md
+
+
+
+3)react fiber architecture
+https://github.com/acdlite/react-fiber-architecture
