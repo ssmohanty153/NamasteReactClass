@@ -1,0 +1,17 @@
+{
+  "name": "fifthclass",
+  "version": "1.0.0",
+  "description": "Lets get hooked",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "subhransu sekhar mohanty",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
