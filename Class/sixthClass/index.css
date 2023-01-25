@@ -1,0 +1,110 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.nav-items>ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items>ul>li {
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.big-title {
+    position: absolute;
+    top: 30%;
+    height: 2em;
+    width: inherit;
+}
+
+.small-title {
+    position: absolute;
+    top: 45%;
+    height: 1em;
+    width: inherit;
+}
+
+.smallest-title {
+    position: absolute;
+    top: 50%;
+    height: .8em;
+    width: 70%;
+}
+
+.circle {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.card {
+    height: 20em;
+    width: 15em;
+}
+
+.shimmer-container {
+    padding: 1em;
+    background-color: #d3d3d3;
+    position: relative;
+}
+
+.rad-gradient {
+    background: linear-gradient(90deg, rgba(211, 211, 211, 0) 0, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%),
+        radial-gradient(circle 16px at center, #ffffff 99%, rgba(0, 0, 0, 0) 0%);
+    background-size: 70% 100%;
+    animation: shimmer 2s linear 1s infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #fff;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
+}
+
+.linear-gradient {
+    background: linear-gradient(90deg, rgba(211, 211, 211, 0) 0, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%),
+        linear-gradient(white 32px, transparent 0);
+    margin: 0 auto;
+    background-size: 30% 100%;
+    animation: shimmer 2s linear 1s infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #fff;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+.shimmer {
+    display: flex;
+}
