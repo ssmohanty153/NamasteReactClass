@@ -1,7 +1,7 @@
 {
   "name": "sevenclass",
   "version": "1.0.0",
-  "description": "this we are using all the routing concept in raect",
+  "description": "this we are using all the routing concept in react",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
