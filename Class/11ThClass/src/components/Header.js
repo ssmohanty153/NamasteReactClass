@@ -10,7 +10,7 @@ const Title = () => (
 const Header = () => {
   const isOnline = useOnline();
   return (
-    <div className="flex justify-between bg-pink-50 shadow-lg">
+    <div className="flex justify-between bg-pink-50 shadow-lg sticky top-0">
       <Title />
 
       <ul className="flex py-10 ">

@@ -1,9 +1,10 @@
 import { restaurantList } from "../contants/configFile";
 import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import UserContext from "../utils/UserContext";
 
 // What is state
 // what is React Hooks? - functions,
@@ -13,7 +14,7 @@ const Body = () => {
   const [allrestaurants, setAllRestaurants] = useState("");
   const [filterRestaurants, setFilterRestaurants] = useState("");
   const [searchText, setSearchText] = useState("");
-
+  const { user, setUser } = useContext(UserContext);
   useEffect(() => {
     apiCall();
   }, []);
@@ -35,6 +36,7 @@ const Body = () => {
 
     return filterData;
   };
+  console.log(user);
   // not render component (Early return)
   // if (!allrestaurants) return null;
   return allrestaurants.length === 0 ? (
@@ -65,6 +67,30 @@ const Body = () => {
         >
           Search
         </button>
+        <input
+          type="text"
+          className="focus:bg-gray-200"
+          placeholder="Name"
+          value={user.name}
+          onChange={(e) => {
+            setUser({
+              ...user,
+              name: e.target.value,
+            });
+          }}
+        />
+        <input
+          type="text"
+          className="focus:bg-gray-200"
+          placeholder="Email"
+          value={user.email}
+          onChange={(e) => {
+            setUser({
+              ...user,
+              email: e.target.value,
+            });
+          }}
+        />
       </div>
       <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         {filterRestaurants && filterRestaurants.length === 0 ? (
